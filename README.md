@@ -13,7 +13,7 @@ React 학습을 위한 스캐폴드 커스텀 템플릿 저장소 입니다.🙌
 ### 저장소 코드를 복사합니다😁
 
 ```bash
-npx degit dnqls9875/likelion-vite-react.
+npx degit dnqls9875/likelion-vite-react
 ```
 
 ### 설치순서 ✅

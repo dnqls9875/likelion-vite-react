@@ -4,7 +4,7 @@ function Prose() {
       <header lang="en">Custom Vite Templete</header>
       <main>
         <section>
-          <h2>React 프로젝트 시작을 위한 사용자 정의 템플릿</h2>
+          <h2 className="a11y-hidden">chip 컴포넌트</h2>
         </section>
       </main>
       <footer>

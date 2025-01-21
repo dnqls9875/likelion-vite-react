@@ -10,18 +10,18 @@
     "vscode": ">=1.9.0"
   },
   "scripts": {
-    "start": "npm run dev --open",
+    "start": "pnpm dev --open",
     "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint --cache \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint --cache 'src/**/*.{ts,tsx}'",
     "format": "prettier --write --cache 'src/**/*.{ts,tsx}'",
     "prepare": "husky"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
-      "npm run lint",
-      "npm run format"
+      "pnpm lint",
+      "pnpm format"
     ]
   },
   "devDependencies": {

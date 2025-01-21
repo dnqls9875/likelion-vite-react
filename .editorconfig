@@ -1,10 +1,9 @@
-# 에디터 구성 설정
 root = true
 
 [*]
-	indent_style = space
-	indent_size = 2
-	end_of_line = lf
-	charset = utf-8
-	trim_trailing_whitespace = false
-	insert_final_newline = false
+  indent_style = space
+  indent_size = 2
+  end_of_line = lf
+  charset = utf-8
+  trim_trailing_whitespace = false
+  insert_final_newline = false

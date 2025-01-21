@@ -1,5 +1,6 @@
 @layer components {
   .ChipList {
+    overflow: auto;
     list-style-type: '';
     margin-block: 0;
     padding-inline-start: 0;
@@ -8,6 +9,10 @@
     align-items: center;
     padding: 8px 12px;
     gap: 4px;
+
+    &::-webkit-scrollbar {
+      height: 4px;
+    }
 
     li {
       flex-shrink: 0;

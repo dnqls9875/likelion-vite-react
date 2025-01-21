@@ -1,4 +1,4 @@
-.a11y-hidden {
+.sr-only {
   overflow: hidden;
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);

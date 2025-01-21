@@ -1,11 +1,7 @@
 import Playground from './playground';
 
 function App() {
-  return (
-    <>
-      <Playground />
-    </>
-  );
+  return <Playground />;
 }
 
 export default App;

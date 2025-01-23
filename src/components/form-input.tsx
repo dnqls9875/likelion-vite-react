@@ -1,48 +1,16 @@
-import { useId } from 'react';
+import { useId, type ComponentProps } from 'react';
 
-interface FormInputProps {
-  type?:
-    | 'text'
-    | 'range'
-    | 'password'
-    | 'number'
-    | 'search'
-    | 'color'
-    | 'email';
+type FormInputProps = ComponentProps<'input'> & {
   label: string;
-  placeholder?: string;
-  value?: string | number;
-  defaultValue?: string | number;
-  readOnly?: boolean;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  [property: string | number]: unknown;
-}
+};
 
-function FormInput({
-  type = 'text',
-  label,
-  placeholder,
-  value,
-  defaultValue,
-  readOnly,
-  onChange,
-  ...restProps
-}: FormInputProps) {
+function FormInput({ label, ...restProps }: FormInputProps) {
   const inputId = useId();
 
   return (
     <div className="formControl">
       <label htmlFor={inputId}>{label}</label>
-      <input
-        type={type}
-        id={inputId}
-        placeholder={placeholder}
-        readOnly={readOnly}
-        defaultValue={defaultValue}
-        value={value}
-        onChange={onChange}
-        {...restProps}
-      />
+      <input id={inputId} {...restProps} />
     </div>
   );
 }

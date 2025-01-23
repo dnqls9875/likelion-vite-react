@@ -16,7 +16,7 @@ function FormRadioOrCheckbox({
     case 'checkbox':
       return (
         <div className="formControl">
-          <input type={type} id={inputId} {...restProps} />
+          <input type={type} id={inputId} {...restProps} />{' '}
           <label htmlFor={inputId}>{label}</label>
         </div>
       );

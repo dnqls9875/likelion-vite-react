@@ -1,26 +1,37 @@
 [
   {
-    "name": "한제이",
-    "email": "hanj2@kakao.com",
-    "password": "$2b$10$K7PvRTiwF3xH5h9R.2IZoOrM54q5fkxlHJiQuTSvRz5vm7O99lxrO",
-    "id": "591c1b02-c690-4348-8dcc-a0c1fb693edf"
-  },
-  {
+    "id": "17529b75-0d90-4d66-9224-dc61159fafca",
     "name": "지훈",
     "email": "yamoo9@naver.com",
-    "password": "$2b$10$6dHtQ34rZC5yWbm9YQOiU.hI9Ek0MrUzlrt0cD9XlSVVHHvUvQbLi",
-    "id": "17c7075e-0cb6-42e8-9d02-156aab3a4935"
+    "profileImage": "/files/proflie-01.jpg",
+    "password": "$2b$09$11p.0vldbjBj4nKeh6/zlen2w9.hJTYIx69R2RaX7eee7bJebf4.e"
   },
   {
-    "id": "f48c4ea8-c42e-45ee-b6b8-ef8eb2b94cc5",
-    "name": "조영민",
-    "email": "dnqls9875@naver.com",
-    "password": "$2b$10$xz9JUjJ0nhzirlavLSSKXufIXb8kFgNsNdw03i3.FeWhtTDY.WWKW"
+    "id": "a7ef2fc8-652a-4904-897e-67b1549ad739",
+    "name": "박정아",
+    "email": "parja@you.com",
+    "profileImage": "/files/proflie-03.jpg",
+    "password": "$2b$09$9KIPmUhOnrGmrGN2Tb0zv.IBcWYc7BXomQ4VOAZQFOlL57GHdhrIO"
   },
   {
-    "id": "ee8b2716-0412-45e2-b0a5-8ad87b818c81",
-    "name": "이용열",
-    "email": "dnqls9871@naver.com",
-    "password": "$2b$10$rs2gpE5/LszSWDKSjhrMkOJKV2zlWu9s/z8nurIaFke5q9Xv17JO2"
+    "id": "70c73c80-7d79-474e-96ed-6693b05e5975",
+    "name": "지우섭",
+    "email": "jee@naver.com",
+    "profileImage": "/files/proflie-05.jpg",
+    "password": "$2b$09$8EX35XBy2wp1mQ0zrzqMMOc6CEPOid3ZuLjSrJonHMuWPW6j210xm"
+  },
+  {
+    "id": "3b56d819-a915-423c-981f-336cbbc42973",
+    "name": "이우빈",
+    "email": "dnqls2323@naver.com",
+    "profileImage": "/files/proflie-02.jpg",
+    "password": "$2b$09$NrJmg0kD0kc3DyFus/gzxeoH.ZH2czPmXz51vv8sQdUBMtQee4CfO"
+  },
+  {
+    "id": "e601de74-209e-44b6-907d-5d054f700ee8",
+    "name": "심선범",
+    "email": "tiger@naver.com",
+    "profileImage": "/files/proflie-06.png",
+    "password": "$2b$09$JL9wAR9EbY4uFW9NE/fUiuoMGHWhssFt009GE8FsSJ35bCD.pGaGO"
   }
 ]

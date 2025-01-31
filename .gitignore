@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,osx,windows,visualstudiocode
 
 ### Custom ###
-FEEDBACK.md
+__FEEDBACK__.md
 
 ### Node ###
 # Logs

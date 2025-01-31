@@ -12,21 +12,47 @@ function SignUpForm() {
     null
   );
 
-  const handleSubmitPromise = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [error, setError] = useState<null | Error>(null);
 
-    const formData = new FormData(e.currentTarget);
+  const handleSubmitAction = async (formData: FormData) => {
+    try {
+      const response = await fetch('http://localhost:4000/api/signup', {
+        method: 'POST',
+        body: formData,
+      });
 
-    fetch('http://localhost:4000/api/signup', {
-      method: 'POST',
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((responseData) => setResponseData(responseData as ResponseDataType))
-      .catch((error) => console.error(error));
+      const jsonData = await response.json();
+
+      if (response.status >= 400) {
+        throw new Error((jsonData as { message: string }).message);
+      }
+
+      setResponseData(jsonData as ResponseDataType);
+    } catch (error) {
+      setError(error as Error);
+    }
   };
 
   // 조건부 렌더링
+  // 오류가 발생한 경우 오류 메시지 출력 (UI 화면)
+  if (error) {
+    return (
+      <div
+        role="alert"
+        style={{
+          color: '#dc362f',
+          display: 'flex',
+          flexFlow: 'column',
+          gap: 0,
+          marginBlock: 20,
+        }}
+      >
+        <h2 style={{ margin: 0 }}>{error.name}</h2>
+        <p style={{ margin: 0 }}>{error.message}</p>
+      </div>
+    );
+  }
+
   // 회원가입 이후 가입 사용자 정보 (UI 화면)
   if (responseData) {
     return (
@@ -46,8 +72,11 @@ function SignUpForm() {
   // 회원가입 폼 (UI 화면)
   return (
     <section style={{ marginInline: 48 }}>
-      <h2>회원가입 폼 (POST 메서드)</h2>
-      <form onSubmit={handleSubmitPromise}>
+      <h2>회원가입 폼</h2>
+      <form
+        // onSubmit={handleSubmitPromise}
+        action={handleSubmitAction}
+      >
         <div style={{ marginBlockEnd: 8 }}>
           <label htmlFor="usernameSignUp">이름</label>
           <input type="text" name="username" id="usernameSignUp" />

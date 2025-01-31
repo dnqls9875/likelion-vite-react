@@ -1,0 +1,36 @@
+.formInput {
+  display: flex;
+  padding: 8px 4px 8px 12px;
+  flex-flow: column;
+  align-items: flex-start;
+  gap: 8px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.30);
+
+  label {
+    color: #000;
+    font-size: 1.6rem; /* 16px */
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  input {
+    display: block;
+    inline-size: 100%;
+    border: 0;
+    padding: 2px 4px;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.50);
+      font-size: 1.4rem;
+      /* 14px */
+      line-height: 1;
+    }
+  }
+}
+
+/* .formInputLabel {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+} */

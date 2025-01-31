@@ -1,20 +1,26 @@
 import { useState } from 'react';
-import SignUpForm from './playgrounds/03-signup-form';
-import SignInForm from './playgrounds/04-signin-form';
+import Nav from './homework/components/nav';
+import HomeworkSignIn from './homework/pages/sign-in';
+import HomeworkSignUpForm from './homework/pages/sign-up';
+
+// 리액트 외부 시스템 (부수적인 것: Side effects)
+const getUIView = () => {
+  const searchParams = new URLSearchParams(location.search);
+  const uiView = searchParams.get('view') ?? 'signin';
+  return uiView as UIView;
+};
+
+type UIView = 'signin' | 'signup';
 
 function Playground() {
-  const [view, setView] = useState(false);
+  const [uiView] = useState<UIView>(getUIView);
+  const isSignInView = uiView.includes('signin');
 
   return (
     <div className="Playground">
       <h1>플레이그라운드</h1>
-      {view ? <SignInForm /> : <SignUpForm />}
-
-      <hr />
-
-      <button type="button" onClick={() => setView(!view)}>
-        {view ? '회원가입' : '로그인'} 페이지로 이동
-      </button>
+      <Nav />
+      {isSignInView ? <HomeworkSignIn /> : <HomeworkSignUpForm />}
     </div>
   );
 }

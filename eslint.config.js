@@ -51,7 +51,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-call': 'off',
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true, allowExportNames: ['navList'] },
       ],
     },
   }
